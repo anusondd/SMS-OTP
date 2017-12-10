@@ -2,5 +2,11 @@
   "name": "SMS-OTP",
   "app_id": "",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {},
+  "proxies": [
+    {
+      "path": "/verify",
+      "proxyUrl": "https://api.nexmo.com/verify"
+    }
+  ]
 }

@@ -7,8 +7,21 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div *ngIf="id==''">
+      <ion-item>
+          <ion-input type="text" placeholder="+66940282690" [(ngModel)]="number"></ion-input>
+      </ion-item>
+      <button ion-button full (click)="send(number)" >Send</button>
+  </div>
+
+  <div *ngIf="id!=''">
+      <ion-item>
+          <ion-input type="text" placeholder="OTP" [(ngModel)]="code"></ion-input>
+      </ion-item>
+      <button ion-button full (click)="check(code)" >Verifiy</button>
+  </div>
+   
+  
+
+
 </ion-content>
